@@ -1,11 +1,25 @@
-<?php 
-require_once __DIR__ . '/Views/parts/header.php';
-?>
+<?php
 
-    <h1>Mon projet PHP</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil vitae fugiat eius quas commodi possimus corporis reiciendis autem perferendis, eligendi cumque adipisci magnam quo quia harum quae cupiditate nesciunt itaque.</p>
+session_start();
 
+include_once 'functions.php';
 
+include_once 'models/SimpleOrm.class.php';
+$conn = new mysqli('localhost', 'root', '');
 
+if ($conn->connect_error)
+    die(sprintf('Unable to connect to the database. %s', $conn->connect_error));
 
-<?php require_once __DIR__ . '/Views/parts/footer.php'; ?>
+SimpleOrm::useConnection($conn, 'projet_php');
+
+if (!empty($_GET['route'])) $route = $_GET['route'];
+else $route = 'home';
+
+switch ($route) {
+    case 'home':
+        include __DIR__ . '/Controllers/home-controller.php';
+        break;
+
+    default:
+        die('Erreur 404');    
+}
