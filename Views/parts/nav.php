@@ -3,10 +3,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Lien 1</a>
+            <a class="nav-link" href="index.php?route=home">Accueil</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Lien 2</a>
+            <a class="nav-link" href="index.php?route=liste">Articles</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="#">Lien 3</a>

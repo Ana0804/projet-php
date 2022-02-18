@@ -4,7 +4,7 @@ session_start();
 
 include_once 'functions.php';
 
-include_once 'models/SimpleOrm.class.php';
+include_once 'models/SimpleOrm.php';
 $conn = new mysqli('localhost', 'root', '');
 
 if ($conn->connect_error)
@@ -18,6 +18,11 @@ else $route = 'home';
 switch ($route) {
     case 'home':
         include __DIR__ . '/Controllers/home-controller.php';
+        break;
+    
+    case 'liste':
+        include __DIR__ . '/Controllers/liste-articles-controller.php';
+        liste();
         break;
 
     default:
