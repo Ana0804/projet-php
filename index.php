@@ -40,6 +40,10 @@ switch ($route) {
         ajout_handler();
         break;
 
+    case 'modifier':
+        include __DIR__ . '/Controllers/modifier-article-controller.php';
+        break;
+
     default:
         die('Erreur 404');
 }
