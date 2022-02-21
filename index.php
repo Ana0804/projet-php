@@ -44,6 +44,10 @@ switch ($route) {
         include __DIR__ . '/Controllers/modifier-article-controller.php';
         break;
 
+    case 'supprimer':
+        include __DIR__ . '/Controllers/supprimer-article-controller.php';
+        break;
+
     default:
         die('Erreur 404');
 }
