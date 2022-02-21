@@ -30,6 +30,16 @@ switch ($route) {
         details();
         break;
 
+    case 'ajout':
+        include __DIR__ . '/Controllers/ajout-article-controller.php';
+        ajout();
+        break;
+
+    case 'ajout-handler':
+        include __DIR__ . '/Controllers/ajout-article-controller.php';
+        ajout_handler();
+        break;
+
     default:
         die('Erreur 404');
 }

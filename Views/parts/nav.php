@@ -9,7 +9,7 @@
             <a class="nav-link" href="index.php?route=liste">Articles</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Lien 3</a>
+            <a class="nav-link" href="index.php?route=ajout">Ajouter un article</a>
             </li>
         </ul>
         </div>

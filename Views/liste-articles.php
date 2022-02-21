@@ -1,7 +1,7 @@
 <?php require_once __DIR__ . '/parts/header.php'; ?>
 
 
-<h1>Articles</h1>
+<h1 class='text-center'>Articles</h1>
 
 <div class="row d-flex justify-content-center">
     <?php foreach ($articles as $article) { ?>
