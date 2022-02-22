@@ -48,6 +48,16 @@ switch ($route) {
         include __DIR__ . '/Controllers/supprimer-article-controller.php';
         break;
 
+    case 'connexion':
+        include __DIR__ . '/Controllers/connexion-controller.php';
+        connexion();
+        break;
+
+    case 'connexion-handler':
+        include __DIR__ . '/Controllers/connexion-controller.php';
+        connexion_handler();
+        break;
+
     default:
         die('Erreur 404');
 }

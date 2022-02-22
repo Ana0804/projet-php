@@ -11,6 +11,9 @@
             <li class="nav-item">
             <a class="nav-link" href="index.php?route=ajout">Ajouter un article</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link" href="index.php?route=connexion">Connexion</a>
+            </li>
         </ul>
         </div>
     </div>
