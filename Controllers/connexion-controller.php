@@ -22,3 +22,8 @@ function connexion_handler() {
     } 
     redirection('connexion');
 }
+
+function deconnexion() {
+    session_destroy();
+    redirection('home');
+}

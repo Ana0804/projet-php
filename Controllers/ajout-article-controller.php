@@ -2,11 +2,13 @@
 include __DIR__ . '/../Models/Article.php';
 
 function ajout() {
+    if (empty($_SESSION['identifiant']) || $_SESSION['identifiant'] != 'admin') die('Erreur 403');
     include __DIR__ . '/../Views/ajout-article.php';
 }
 
 function ajout_handler() {
-    
+    if (empty($_SESSION['identifiant']) || $_SESSION['identifiant'] != 'admin') die('Erreur 403');
+
     if (
         !empty($_POST['titre'])
         && !empty($_POST['auteur'])

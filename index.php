@@ -58,6 +58,11 @@ switch ($route) {
         connexion_handler();
         break;
 
+    case 'deconnexion':
+        include __DIR__ . '/Controllers/connexion-controller.php';
+        deconnexion();
+        break;
+
     default:
         die('Erreur 404');
 }

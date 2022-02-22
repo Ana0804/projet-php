@@ -8,12 +8,23 @@
             <li class="nav-item">
             <a class="nav-link" href="index.php?route=liste">Articles</a>
             </li>
+
+            <?php if (!empty($_SESSION['identifiant']) && $_SESSION['identifiant'] == 'admin') : ?>
             <li class="nav-item">
             <a class="nav-link" href="index.php?route=ajout">Ajouter un article</a>
             </li>
+            <?php endif; ?>
+
+            <?php if (empty($_SESSION['identifiant'])) : ?>
             <li class="nav-item">
             <a class="nav-link" href="index.php?route=connexion">Connexion</a>
             </li>
+            <?php else : ?>
+            <li class="nav-item">
+                <a class="nav-link" href="index.php?route=deconnexion">Déconnexion</a>
+            </li>
+            <?php endif; ?>
+
         </ul>
         </div>
     </div>
